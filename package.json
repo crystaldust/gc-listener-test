@@ -1,0 +1,24 @@
+{
+  "name": "gc-listener-test",
+  "version": "1.0.0",
+  "description": "A test script for node module 'gc-listener'",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crystaldust/gc-listener-test.git"
+  },
+  "keywords": [
+    "gc",
+    "performance",
+    "test"
+  ],
+  "author": "crystaldust",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crystaldust/gc-listener-test/issues"
+  },
+  "homepage": "https://github.com/crystaldust/gc-listener-test"
+}
