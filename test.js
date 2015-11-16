@@ -1,4 +1,4 @@
-var gc = require( './build/Release/gc-listener' );
+var gc = require( 'gc-listener' );
 
 var gcTimes = 0;
 
