@@ -9,5 +9,4 @@ node_js:
 - "4"
 - "5"
 
-scripts:
-"node test.js"
+scripts: "node test.js"
