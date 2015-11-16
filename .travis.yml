@@ -9,3 +9,4 @@ node_js:
 - "4"
 - "5"
 
+install: make gcc
