@@ -2,19 +2,21 @@ var gc = require( 'gc-listener' );
 
 var gcTimes = 0;
 
-gc.setCB( function() {
-  console.log( 'cb called' );
-  ++gcTimes;
-  console.log( gcTimes );
+gc.before( function() {
+  console.log( 'before gc #' + gcTimes );
   showMem();
 } );
 
+gc.after( function() {
+  ++gcTimes;
+  console.log( 'after gc #' + gcTimes );
+  showMem();
+} );
 
 var ary = [];
 
 var interval = setInterval( function() {
-  if( gcTimes < 5 ) {
-    //console.log( 'push' );
+  if( gcTimes < 4 ) {
     for( var i=0; i<1000; ++i ) {
       ary.push( { value : Math.random() } );
     }
@@ -29,8 +31,7 @@ var OneMega = 1024 * 1024;
 
 function showMem() {
   var usage = process.memoryUsage();
-  console.log( 'rss       : ', ( usage.rss        / OneMega ) );
-  console.log( 'heapTotal : ', ( usage.heapTotal  / OneMega ) );
-  console.log( 'heapUsed  : ', ( usage.heapUsed   / OneMega ) );
-
+  console.log( 'rss       : ', ( usage.rss        / OneMega ).toFixed(2), ' MB' );
+  console.log( 'heapTotal : ', ( usage.heapTotal  / OneMega ).toFixed(2), ' MB' );
+  console.log( 'heapUsed  : ', ( usage.heapUsed   / OneMega ).toFixed(2), ' MB' );
 }

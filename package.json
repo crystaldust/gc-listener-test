@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/crystaldust/gc-listener-test",
   "dependencies": {
-    "gc-listener": "0.0.2"
+    "gc-listener": "https://github.com/crystaldust/node-gc-listener.git#develop"
   }
 }
