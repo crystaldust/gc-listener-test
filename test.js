@@ -2,12 +2,10 @@ var gc = require( 'gc-listener' );
 
 var gcTimes = 0;
 
-/*
 gc.before( function() {
   console.log( 'before gc #' + gcTimes );
   showMem();
 } );
-*/
 
 gc.after( function() {
   ++gcTimes;
